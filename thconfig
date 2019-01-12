@@ -1,0 +1,31 @@
+encoding  utf-8
+language ru
+
+source Nezhelannaya.th
+
+export model -o output/nezhelannaya.lox
+export model -format survex -o output/nezhelannaya.3d
+export map -o output/nezhelannaya.kml
+export map -o output/nezhelannaya.xvi
+
+layout normal
+     symbol-set AUT
+     doc-author "Paweł Krawczyk"
+     doc-title "Нежеланная"
+     statistics explo all  
+     statistics topo all
+     statistics carto all
+     statistics copyright all
+     legend on
+     map-comment "Нежеланная"
+     # for debugging
+     #symbol-show point cave-station
+     #symbol-show group cave-centerline
+     #debug station-names
+     #map-header 0 0 off 
+     symbol-hide group cave-centerline
+     symbol-hide point cave-station
+endlayout
+
+export map -format pdf -layout normal -o output/nezhelannaya.pdf
+export map -format pdf -layout normal -projection extended -o output/nezhelannaya_ext.pdf
