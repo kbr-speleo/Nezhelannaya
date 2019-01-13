@@ -16,6 +16,7 @@ layout normal
      statistics topo all
      statistics carto all
      statistics copyright all
+     color map-fg 80
      legend on
      map-comment "Нежеланная"
      # for debugging
